@@ -1,8 +1,8 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-export async function tmpAPI(formDate) {
+export async function regionAPI(formDate) {
   const response = await fetch(
-    `http://apis.data.go.kr/B551011/KorService/searchKeyword?serviceKey=${API_KEY}&_type=json&MobileOS=WIN&numOfRows=10&MobileApp=test&arrange=P&keyword=광화문`,
+    `http://apis.data.go.kr/B551011/KorService/areaCode?serviceKey=${API_KEY}&numOfRows=20&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json`,
     {
       method: "GET",
       body: formDate,
@@ -12,5 +12,6 @@ export async function tmpAPI(formDate) {
     throw new Error("정보를 불러오는데 실패했습니다.");
   }
   const body = await response.json();
-  return body;
+  console.log(body);
+  return body.response.body.items.item;
 }
