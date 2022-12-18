@@ -1,0 +1,12 @@
+.nav {
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  height: 50px;
+  box-shadow: 1px solid black;
+  padding: 1rem 9%;
+  display: flex;
+  z-index: 1000;
+  align-items: center;
+  margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+  border-bottom: solid 3px rgb(212, 212, 212);
+}

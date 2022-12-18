@@ -1,7 +1,12 @@
+import "./Nav.css";
+
 const Nav = () => {
   return (
     <>
-      <div></div>
+      <div className="nav">
+        <div className="logo"></div>
+        <div></div>
+      </div>
     </>
   );
 };

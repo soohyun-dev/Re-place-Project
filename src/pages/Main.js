@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
 import { regionAPI } from "../API/api";
+import Nav from "../components/Nav";
 
 const Main = () => {
-  const [siRegions, setSiRegions] = useState([]);
-  const [doRegions, setDoRegions] = useState([]);
+  const [regions, setRegions] = useState([]);
   const handleAPI = async () => {
     const result = await regionAPI();
-    setSiRegions(
+    setRegions(
       result.map((region) => {
-        if (region["rnum"] < 9) return region["name"];
-      })
-    );
-    setDoRegions(
-      result.map((region) => {
-        if (region["rnum"] >= 9) return region["name"];
+        return region["name"];
       })
     );
   };
@@ -24,9 +19,9 @@ const Main = () => {
 
   return (
     <>
+      <Nav />
       <div>
-        <h1>{siRegions.join(" ")}</h1>
-        <h1>{doRegions.join(" ")}</h1>
+        <h1>{regions.join(" ")}</h1>
       </div>
     </>
   );
