@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { regionAPI } from "../API/api";
+import { regionAPI, regionsAPI } from "../API/api";
 import Nav from "../components/Nav";
 
 const Main = () => {
@@ -12,9 +12,14 @@ const Main = () => {
       })
     );
   };
+  const handlesAPI = async () => {
+    const result = await regionsAPI();
+    console.log(result);
+  };
 
   useEffect(() => {
     handleAPI();
+    handlesAPI();
   }, []);
 
   return (
