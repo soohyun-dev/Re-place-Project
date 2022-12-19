@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import RegionContent from "./components/RegionContent";
 import Main from "./pages/Main";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Main />}></Route>
+        <Route path="/region/:name" element={<RegionContent />}></Route>
       </Routes>
     </>
   );

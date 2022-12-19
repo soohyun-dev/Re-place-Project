@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 const Region = (props) => {
   const [code, name] = props.region;
   return (
     <>
       <div>
-        <h1>{name}</h1>
+        <Link to={`region/${name}`} state={{ code, name }}>
+          <p>{name}</p>
+        </Link>
       </div>
     </>
   );

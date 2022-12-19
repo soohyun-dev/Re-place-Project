@@ -18,7 +18,7 @@ export async function regionAPI(formDate) {
 
 export async function regionsAPI(formDate) {
   const response = await fetch(
-    `http://apis.data.go.kr/B551011/KorService/areaBasedList?serviceKey=${API_KEY}&pageNo=1&numOfRows=100&MobileApp=AppTest&MobileOS=ETC&arrange=A&areaCode=1&_type=json`,
+    `http://apis.data.go.kr/B551011/KorService/areaBasedList?serviceKey=${API_KEY}&pageNo=1&numOfRows=500&MobileApp=AppTest&MobileOS=ETC&arrange=A&areaCode=1&_type=json`,
     {
       method: "GET",
       body: formDate,
