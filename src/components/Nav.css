@@ -10,3 +10,7 @@
   margin: -0.5rem -0.5rem 0.5rem -0.5rem;
   border-bottom: solid 3px rgb(212, 212, 212);
 }
+
+.logo {
+  height: 60px;
+}
