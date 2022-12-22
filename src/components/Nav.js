@@ -12,7 +12,11 @@ const Nav = () => {
           </Link>
         </div>
         <div></div>
-        <div></div>
+        <div>
+          <Link to="/">
+            <h3>HOME</h3>
+          </Link>
+        </div>
       </div>
     </>
   );
